@@ -5,10 +5,10 @@ const mongoose = require('mongoose');
 const noteSchema = mongoose.Schema ({
   title: String,
   content: String,
-  //uncertain about below - need {} or no?
   created: {type: Date, default: Date.now}
 });
 
+//changes "_id" to "id"
 noteSchema.set('toObject', {
   transform: function (doc, ret) {
     ret.id = ret._id;
