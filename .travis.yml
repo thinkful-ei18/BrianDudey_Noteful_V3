@@ -10,4 +10,4 @@ deploy:
   #   secure: [YOUR-API-KEY]
   app: briandudey-noteful
   on:
-    repo: briandudey/briandudey-noteful
+    repo: thinkful-ei18/BrianDudey_Noteful_V3
