@@ -211,33 +211,3 @@
 //     });
 //   });
 
-//   describe('DELETE endpoint', function () {
-//     // strategy:
-//     //  1. get a post
-//     //  2. make a DELETE request for that post's id
-//     //  3. assert that response has right status code
-//     //  4. prove that post with the id doesn't exist in db anymore
-//     it('should delete a post by id', function () {
-
-//       let post;
-
-//       return BlogPost
-//         .findOne()
-//         .then(_post => {
-//           post = _post;
-//           return chai.request(app).delete(`/posts/${post.id}`);
-//         })
-//         .then(res => {
-//           res.should.have.status(204);
-//           return BlogPost.findById(post.id);
-//         })
-//         .then(_post => {
-//           // when a variable's value is null, chaining `should`
-//           // doesn't work. so `_post.should.be.null` would raise
-//           // an error. `should.be.null(_post)` is how we can
-//           // make assertions about a null value.
-//           should.not.exist(_post);
-//         });
-//     });
-//   });
-// });

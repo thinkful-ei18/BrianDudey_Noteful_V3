@@ -6,19 +6,12 @@ mongoose.Promise = global.Promise;
 const { MONGODB_URI } = require('../config');
 const Note = require('../models/note');
 
-const seedNotes = require('../db/seed/notes');
-
 mongoose.connect(MONGODB_URI)
   .then(() => {
-    return mongoose.connection.db.dropDatabase()
-      .then(result => {
-        console.info(`Dropped Database: ${result}`);
-      });
-  })
-  .then(() => {
-    return Note.insertMany(seedNotes)
+    return Note.find({ $text: { $search: 'ways' } },{ score: { $meta: 'textScore' } })
+      .sort({ score: { $meta: 'textScore' } })
       .then(results => {
-        console.info(`Inserted ${results.length} Notes`);
+        console.log(results);
       });
   })
   .then(() => {
