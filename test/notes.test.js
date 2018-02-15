@@ -206,7 +206,7 @@ describe('GET /v3/notes', function () {
     });
   });
 
-  it('should return an error when missing the "title" field', function () {
+  it('should return an error when missing a "title" field', function () {
     const updateItem = {
       'foo': 'bar'
     };
