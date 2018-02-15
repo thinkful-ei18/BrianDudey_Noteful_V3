@@ -229,23 +229,23 @@ describe('GET /v3/notes', function () {
 
 
   
-  //Not working "notes not defined"
-  // describe('GET /v3/notes', function() {
-  //   it('should return all existing notes', function () {
-  //     let res;
-  //     return chai.request(app)
-  //       .get('/v3/notes')
-  //       .then(_res => {
-  //         res = _res;
-  //         expect(res).to.have.status(200);
-  //         expect(res.body).to.have.length.of.at.least(1);
-  //         return Notes.count();
-  //       })
-  //       .then(count => {
-  //         expect(res.body).to.have.length.of(count);
-  //       });
-  //   });
-  // });
+  Not working "notes not defined"
+  describe('GET /v3/notes', function() {
+    it('should return all existing notes', function () {
+      let res;
+      return chai.request(app)
+        .get('/v3/notes')
+        .then(_res => {
+          res = _res;
+          expect(res).to.have.status(200);
+          expect(res.body).to.have.length.of.at.least(1);
+          return Note.count();
+        })
+        .then(count => {
+          expect(res.body).to.have.length.of(count);
+        });
+    });
+  });
 
   describe('PUT endpoint /v3/notes/:id', function () {
 
