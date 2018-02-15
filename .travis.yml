@@ -1,13 +1,11 @@
 language: node_js
 node_js: node
-env:
-  - NODE_ENV=test
 services:
   - mongodb
 deploy:
   provider: heroku
-  # api_key:
-  #   secure: [YOUR-API-KEY]
+  api_key:
+    secure: hDRR40gN4wmlfYSc0l6cGOkzkXRTDqzznqp6y7VnbmkKoIkjJvqCDcW3aRLWjY5Ef/NJYtUs164LdZmePBkXEZwx6A/sZN+MUlMPXCPwFkQnWCZq7RcKYoAS3uPdLGzqOoM1xkmtMn1REq1Zk6dS1Bjb0PLdgZj2CuvD3zA8NnpRvXlfOhljv37P3qDJ/kI10OX8VLtQgAX//T8KSttM7C8oYXKFVSQlo7BO0PfXZuIkYJZYirgmzi1+OoVZkstZyBEFgPotlJmjUi9ijh/nGuzw9W60tK1+fLHoSw7ueXj+9w1w2qSRtBD/OnMVVoGw/N8u0piNqoxdPzhWwcGU24M5RdLPUcgwaE+FgcbkZM/41d81dzfVSwosHZSgllH7QAxQ9C6xsARl9X9Xz/C0H+kUMRayxu4BFf3qOS6aoWPfkKvlXhQiQJTVR04UW2RjOIA0bG2p+538ZQKCoQaIGTS2fIpwxshU6/mNr2DcvD5DajoFVmZJQr6X0Bi1MgZ6/Qy8cTCd8+kLAEjNrhlHXJIe+lL+iIk7i5l6eFd9PiJE74CcwQB/UjowyOWys/eypI1otJEWf7KsvEs3GYT6i4wI82NruJEHvZX4FlVCMRus9DDJjV1w4JljdH+EJv2LXn+1+aky2Uudc0lCgQ2Tt5slXqBNv6swO54Wu72YVwg=
   app: briandudey-noteful
   on:
     repo: thinkful-ei18/BrianDudey_Noteful_V3
