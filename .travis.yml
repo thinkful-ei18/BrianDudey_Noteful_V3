@@ -10,4 +10,4 @@ deploy:
   #   secure: [YOUR-API-KEY]
   app: briandudey-noteful
   on:
-    repo: briandudey/BrianDudey_Noteful_V3
+    repo: briandudey/briandudey-noteful
