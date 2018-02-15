@@ -249,7 +249,7 @@ describe('GET /v3/notes', function () {
 
   describe('PUT endpoint /v3/notes/:id', function () {
 
-    it('Update a Note with new user-supplied information', function () {
+    it('Update a Note with new user supplied information', function () {
       const updateData = {
         title: 'this would be the title',
         content: 'this would be the content',
